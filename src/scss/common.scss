@@ -1,5 +1,6 @@
 // Заголовки, общие БЄМ блоки и проче...
 $accentColor: #2196F3;
+$hoverColor: #0077d8;
 
 .page {
 
@@ -57,6 +58,14 @@ $accentColor: #2196F3;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     padding: rem(10) rem(32);
+
+    transition: color 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+            &:hover {
+                background-color: $hoverColor;
+            }
+        }
 }
 
 
