@@ -70,6 +70,7 @@ background-color: #2F303A;
 
 .socials {
 
+
     // .socials__body
 
     &__body {}
@@ -78,31 +79,44 @@ background-color: #2F303A;
 
     &__list {
         display: flex;
+
+        
     }
 
     // .socials__item
 
     &__item {
-        display: flex;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-                background-color: rgba(255, 255, 255, 0.1);
-                    border-radius: 50%;
-                    height: rem(45);
-                    width: rem(45);
 
-        &:not(:last-child) {
+    &:not(:last-child) {
             @include adaptiveValue("margin-right", 10, 7);
-        }            
+        }
+
         
     }
 
     // .socials__link
 
     &__link {
+        color: #FFFFFF;
+        font-size: rem(16);
+        display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            height: rem(45);
+            width: rem(45);
+            transition: color 0.7s ease 10s;
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: #2196F3;
+            }
+        }
+    }
 
-
+    &_icon-s-fb {
+        color: red;
     }
 }
 
