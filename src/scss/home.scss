@@ -212,17 +212,17 @@
     // .item-team__social
 
     &__social {
-        @include adaptiveValue("margin-top", 16, 10);
+        // @include adaptiveValue("margin-top", 16, 10);
     }
 }
 .social {
-@include adaptiveValue("margin-left", 32, 10);
-@include adaptiveValue("margin-right", 32, 10);
+// @include adaptiveValue("margin-left", 32, 10);
+// @include adaptiveValue("margin-right", 32, 10);
     // .social__list
 
     &__list {
-        @include adaptiveValue("margin-left", 32, 10);
-@include adaptiveValue("margin-right", 32, 10);
+        // @include adaptiveValue("margin-left", 32, 10);
+        // @include adaptiveValue("margin-right", 32, 10);
         display: flex;
         justify-content: space-between;
     }
@@ -230,24 +230,20 @@
     // .social__item
 
     &__item {
-
-
-
     }
 
     // .social__link
 
     &__link {
-        padding: rem(12);
-
-    }
-
-    
-    &__picture {
-
-        img {
-            fill: #757575;
-        }
+        color: #AFB1B8;
+        padding: rem(25);
+        @media (any-hover: hover) {
+                &:hover {
+                    color: #ffffff;
+                    background-color: $accentColor;
+                    border-radius: 50%;
+                }
+            }
     }
 }
 
