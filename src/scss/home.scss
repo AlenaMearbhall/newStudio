@@ -212,38 +212,49 @@
     // .item-team__social
 
     &__social {
-        // @include adaptiveValue("margin-top", 16, 10);
+
     }
 }
 .social {
-// @include adaptiveValue("margin-left", 32, 10);
-// @include adaptiveValue("margin-right", 32, 10);
-    // .social__list
+    
 
     &__list {
-        // @include adaptiveValue("margin-left", 32, 10);
-        // @include adaptiveValue("margin-right", 32, 10);
+        @include adaptiveValue("margin-top", 28, 15);
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
 
     // .social__item
 
     &__item {
+        padding: rem(9);
+        transition: color 0.3s ease 0s;
+
+
+        @media (any-hover: hover) {
+                &:hover {
+                    padding: rem(9);
+                    background-color: $accentColor;
+                    border-radius: 50%;
+                    color: #ffffff;
+                }
+            }
+
     }
 
     // .social__link
 
-    &__link {
+    &__team {
         color: #AFB1B8;
-        padding: rem(25);
+        font-size: rem(20);
+        transition: color 0.3s ease 0s;
+        
         @media (any-hover: hover) {
                 &:hover {
                     color: #ffffff;
-                    background-color: $accentColor;
-                    border-radius: 50%;
                 }
             }
+
     }
 }
 
