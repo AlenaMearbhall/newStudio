@@ -11,6 +11,12 @@ $hoverColor: #0077d8;
 
     &__about {
     }
+    &__works {
+        @media (max-width: 1156px) {
+            visibility: hidden;
+        
+            }
+    }
 
     &__clients {}
 }
@@ -22,7 +28,7 @@ $hoverColor: #0077d8;
 ._ibg img {
     position: absolute;
     width: 100%;
-    @include adaptiveValue("height", 600, 200);
+    @include adaptiveValue("height", 600, 400);
     top: 0;
     left: 0;
     object-fit: cover;
@@ -40,7 +46,7 @@ $hoverColor: #0077d8;
     &__big {
         color: #FFFFFF;
         font-weight: 900;
-        font-size: 44px;
+        @include adaptiveValue("font-size", 44, 26);
         line-height: 1.36;
         letter-spacing: 0.06em;
     }

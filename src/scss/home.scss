@@ -18,8 +18,8 @@
     // .hero__title
 
     &__title {
-        @include adaptiveValue("margin-top", 200, 20);
-        @include adaptiveValue("max-width", 700, 120);
+        @include adaptiveValue("margin-top", 200, 118);
+        @include adaptiveValue("max-width", 700, 360);
 
     }
 
@@ -30,7 +30,7 @@
     }
 
         &__button {
-            @include adaptiveValue("margin-top", 30, 15);
+            @include adaptiveValue("margin-top", 30, 30);
 
         }
 
@@ -48,7 +48,7 @@
 
 .about {
     position: relative;
-    @include adaptiveValue("margin-top", 294, 200);
+    @include adaptiveValue("margin-top", 294, 120);
     // .about__container
 
     &__container {
@@ -59,15 +59,29 @@
 
     &__list {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
+
     }
 
     // .about__item
 
     &__item {
+        max-width: 23%;
+        gap: 30;
+            @media (max-width: 930px) {
+                    max-width: 48%;
+                    @include adaptiveValue("margin-top", 30, 20);
+            
+                }
 
         &:not(:last-child) {
                 @include adaptiveValue("margin-right", 30, 10);
+                @media (max-width: 930px) {
+                        @include adaptiveValue("margin-right", 0, 0);
+
+                
+                    }
             }
 
     }
@@ -297,6 +311,11 @@
     // .clients__link
 
     &__link {
+                @media (any-hover: hover) {
+                        &:hover {
+                            color: $accentColor;
+                        }
+                    }
         
     }
 }
